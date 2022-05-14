@@ -23,7 +23,7 @@ class HabitViewController: UIViewController {
     
     var habitDetailsViewCallback: HabitDetailsViewProtocol?
     
-    var habit = Habit(name: "Выпить стакан воды перед завтраком", date: Date(), color: .systemRed)
+    var habit = Habit(name: "Читать книгу", date: Date(), color: .systemRed)
     
     private lazy var habitStore: HabitsStore = {
         return HabitsStore.shared

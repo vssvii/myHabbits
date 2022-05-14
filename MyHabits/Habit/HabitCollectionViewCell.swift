@@ -18,7 +18,7 @@ class HabitCollectionViewCell: UICollectionViewCell {
     private let baseInset: CGFloat = 20
     private let imageSize: CGFloat = 36
     
-    var habit = Habit(name: "Выпить стакан воды перед завтраком", date: Date(), color: .systemRed)
+    var habit = Habit(name: "Читать книгу", date: Date(), color: .systemRed)
     
     private lazy var nameLabel: UILabel = {
         let label = UILabel()
