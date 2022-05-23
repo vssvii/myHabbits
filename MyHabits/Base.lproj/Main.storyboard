@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sZy-hh-e7B">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sZy-hh-e7B">
+    <device id="ipad12_9" orientation="portrait" layout="fullscreen" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -16,7 +17,7 @@
                     <tabBarItem key="tabBarItem" title="Information" id="LyB-uq-ubz"/>
                     <navigationItem key="navigationItem" id="sCX-bL-SUO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="6bg-GS-qm5">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -30,9 +31,9 @@
         <!--Информация-->
         <scene sceneID="vj8-ay-GWm">
             <objects>
-                <viewController id="BaY-g9-tLo" customClass="InfoViewController" customModule="MyHabits" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BaY-g9-tLo" customClass="InformationViewController" customModule="MyHabits" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bGs-zJ-Y6g">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6AG-ai-Oo3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -49,7 +50,7 @@
             <objects>
                 <viewController title="Сегодня" id="Px9-2w-eHv" customClass="HabitsViewController" customModule="MyHabits" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bdq-Oe-mwn">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="8nG-dF-lkh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -57,7 +58,6 @@
                     <tabBarItem key="tabBarItem" title="Привычки" image="rectangle.grid.1x2.fill" catalog="system" id="yXW-I2-WLr"/>
                     <navigationItem key="navigationItem" title="Сегодня" id="XhZ-lg-qPZ"/>
                     <connections>
-                        <segue destination="cae-Km-Qev" kind="presentation" identifier="createHabit" id="rFX-jl-PPU"/>
                         <segue destination="lJp-vV-5ca" kind="show" identifier="habitDetails" id="atW-uR-EVk"/>
                     </connections>
                 </viewController>
@@ -70,7 +70,7 @@
             <objects>
                 <viewController id="lJp-vV-5ca" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7kh-OI-GqY">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="PJb-xk-5fu"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -81,46 +81,13 @@
             </objects>
             <point key="canvasLocation" x="3798" y="66"/>
         </scene>
-        <!--Создать-->
-        <scene sceneID="eRZ-MC-I0f">
-            <objects>
-                <viewController id="cae-Km-Qev" customClass="HabitViewController" customModule="MyHabits" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="99y-nK-Obs">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="yDD-jj-zeh"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Создать" id="Yyv-D1-oZT">
-                        <barButtonItem key="leftBarButtonItem" title="Отменить" id="OfV-oO-Yji">
-                            <color key="tintColor" name="CustomPurple"/>
-                            <connections>
-                                <action selector="actionCancelButton:" destination="cae-Km-Qev" id="1tN-57-Ur9"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Сохранить" style="done" id="8Us-VK-1id">
-                            <color key="tintColor" name="CustomPurple"/>
-                            <connections>
-                                <action selector="actionSaveButton:" destination="cae-Km-Qev" id="42m-0D-h7V"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="cancelButton" destination="OfV-oO-Yji" id="vrK-rz-DH2"/>
-                        <outlet property="saveButton" destination="8Us-VK-1id" id="veS-s1-bM8"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ViJ-vy-SQZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3807" y="-725"/>
-        </scene>
         <!--Habits-->
         <scene sceneID="6F0-bA-WZQ">
             <objects>
                 <navigationController id="m7o-TG-BcI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Habits" id="05L-dw-HhQ"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="HY3-3r-pGw">
-                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -156,7 +123,7 @@
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rectangle.grid.1x2.fill" catalog="system" width="128" height="101"/>
         <namedColor name="CustomPurple">
-            <color red="0.63137254901960782" green="0.086274509803921567" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63099998235702515" green="0.086000002920627594" blue="0.80000001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
