@@ -14,7 +14,7 @@ import UIKit
 
 class HabitDetailsViewController: UIViewController {
     
-    var habit = Habit(name: "Читать книгу", date: Date(), color: .systemRed)
+    var habit = Habit(name: "", date: Date(), color: .systemRed)
     
     private lazy var habitDates: [Date] = {
         HabitsStore.shared.dates.reversed()

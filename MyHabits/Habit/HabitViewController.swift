@@ -23,7 +23,7 @@ class HabitViewController: UIViewController {
     
     var habitDetailsViewCallback: HabitDetailsViewProtocol?
     
-    var habit = Habit(name: "Читать книгу", date: Date(), color: .systemRed)
+    var habit = Habit(name: "", date: Date(), color: .systemRed)
     
     private lazy var habitStore: HabitsStore = {
         return HabitsStore.shared
@@ -86,13 +86,9 @@ class HabitViewController: UIViewController {
         return view
     }()
     
-    private lazy var colorPickerViewController: UIColorPickerViewController = {
-        let cv = UIColorPickerViewController()
-        cv.delegate = self
-        return cv
-    }()
-    
     @objc func tapColorPicker() {
+        let colorPickerViewController = UIColorPickerViewController()
+        colorPickerViewController.delegate = self
         present(colorPickerViewController, animated: true, completion: nil)
     }
     
@@ -283,9 +279,9 @@ class HabitViewController: UIViewController {
 extension HabitViewController: UIColorPickerViewControllerDelegate {
     
     func colorPickerViewControllerDidSelectColor(_ viewController: UIColorPickerViewController) {
-        habit.color = colorPickerViewController.selectedColor
+        habit.color = viewController.selectedColor
         
-        colorPickerView.backgroundColor = colorPickerViewController.selectedColor
+        colorPickerView.backgroundColor = viewController.selectedColor
     }
 }
 
